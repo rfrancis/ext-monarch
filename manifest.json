@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+	"name": "Extension Monarch",
+	"version": "0.0.1",
+	"description": "Rule over your extensions with, well, rules. Determine what will or will not be enabled on this browser instance!",
+	"browser_action": {
+		"default_title": "Extension Monarch",
+		"default_popup": "extme.html"
+	},
+	"author": "R. Francis Smith <rfrancis@randomgang.com>",
+	"permissions": ["management","storage","contextMenus"],
+	"minimum_chrome_version": "58",
+	"background": {
+		"page": "background.html",
+		"persistent": false
+	}
+}
