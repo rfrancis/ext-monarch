@@ -35,6 +35,7 @@ chrome.management.getAll(function(arr) {
 	execButton.innerHTML = "Execute";
 	execButton.addEventListener('click',function() {
 		executeRules(enable,disable);
+		doNotify("Updating enabled extensions!");
 		location.reload();
 	});
 	execButton.style.fontSize = "larger";
