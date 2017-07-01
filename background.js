@@ -9,13 +9,19 @@ chrome.runtime.onInstalled.addListener(function() {
 	});
 	chrome.contextMenus.onClicked.addListener(function(info) {
 		if (info.menuItemId == "extme_execute") {
-			var enable, disable;
-			loadRules(function(en,dis) {
-				enable = en;
-				disable = dis;
+			loadRules(function(enable,disable) {
 				executeRules(enable,disable);
+				doNotify("Updating enabled extensions!");
 			});
 		}
 	});
 });
 
+chrome.storage.local.get("opt_autostart",function(data) {
+	if (data["opt_autostart"]) {
+		loadRules(function(enable,disable) {
+			executeRules(enable,disable);
+			doNotify("Updating enabled extensions!");
+		});
+	}
+});

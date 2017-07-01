@@ -15,3 +15,15 @@ var executeRules = function (enable,disable) {
 	});
 }
 
+var doNotify = function(message) {
+	chrome.notifications.create({
+		"iconUrl": "okay.ico",
+		"type": "basic",
+		"title": "Extensions Monarch",
+		"message": message
+	},function(id) {
+		window.setTimeout(function() {
+			chrome.notifications.clear(id);
+		},2000);
+	});
+}
