@@ -17,5 +17,10 @@
 	"options_ui": {
 		"page": "options.html",
 		"chrome_style": true
+	},
+	"icons": {
+		"16": "icons8-Butterfly-16.png",
+		"48": "icons8-Butterfly-48.png",
+		"128": "icons8-Butterfly-128.png"
 	}
 }

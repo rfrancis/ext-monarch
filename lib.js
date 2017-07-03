@@ -17,7 +17,7 @@ var executeRules = function (enable,disable) {
 
 var doNotify = function(message) {
 	chrome.notifications.create({
-		"iconUrl": "okay.ico",
+		"iconUrl": "icons8-Butterfly-128.png",
 		"type": "basic",
 		"title": "Extensions Monarch",
 		"message": message
