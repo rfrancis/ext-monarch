@@ -8,7 +8,7 @@
 		"default_popup": "popup.html"
 	},
 	"author": "R. Francis Smith <rfrancis@randomgang.com>",
-	"permissions": ["management","storage","contextMenus","notifications"],
+	"permissions": ["management","storage","contextMenus","notifications","downloads"],
 	"minimum_chrome_version": "58",
 	"background": {
 		"page": "background.html",
