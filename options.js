@@ -9,3 +9,14 @@ chrome.storage.local.get("opt_autostart",function(data) {
 		});
 	});
 });
+document.querySelector("#opt_export").addEventListener("click",function() {
+	chrome.storage.local.get(null,function(data) {
+		var blob = new Blob([JSON.stringify(data)],{ type: "application/json" });
+		var url = URL.createObjectURL(blob);
+		var a = document.createElement("a");
+		a.href = url;
+		a.download = "ext-monarch.json";
+		a.click();
+	});
+});
+
